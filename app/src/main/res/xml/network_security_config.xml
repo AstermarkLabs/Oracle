@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Default-deny cleartext everywhere except the M6 emulator-to-host bridge route.
+
+  10.0.2.2 is the emulator's fixed alias to the host loopback (android-node-contract.md, "M6
+  bridge handoff") and the M6 endpoint is `ws://`, not `wss://`, so it needs an explicit
+  cleartext carve-out. Every other destination stays on the platform default (HTTPS/WSS only).
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>
