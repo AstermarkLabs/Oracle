@@ -1,0 +1,177 @@
+{
+  "app/build.gradle.kts": {
+    "mtime": 1787377156.0548046,
+    "ast_hash": "a460a8eb24b45661ee26343da36ae4c0",
+    "semantic_hash": ""
+  },
+  "app/src/androidTest/java/dev/astermark/oracle/ExampleInstrumentedTest.kt": {
+    "mtime": 1787018152.7861345,
+    "ast_hash": "3192486ce303c83336b8a7fd1f5178e8",
+    "semantic_hash": "3192486ce303c83336b8a7fd1f5178e8"
+  },
+  "app/src/main/java/dev/astermark/oracle/MainActivity.kt": {
+    "mtime": 1787377138.3000963,
+    "ast_hash": "414e46648a620b9c341fd8bab4c62d90",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/devicemanager/DeviceManagerScreen.kt": {
+    "mtime": 1787377129.4507432,
+    "ast_hash": "51d82da6dd03c94d24d47182ec6ff760",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/onboarding/OnboardingModels.kt": {
+    "mtime": 1787022818.5062497,
+    "ast_hash": "e2de8548d5cdf73643339fa50631e4af",
+    "semantic_hash": "e2de8548d5cdf73643339fa50631e4af"
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/onboarding/OnboardingPageContent.kt": {
+    "mtime": 1787029153.2729456,
+    "ast_hash": "1c24cc86d818a15509cf66d6a9349a4a",
+    "semantic_hash": "1c24cc86d818a15509cf66d6a9349a4a"
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/onboarding/OnboardingProgress.kt": {
+    "mtime": 1787022290.83906,
+    "ast_hash": "250a7b38f62c7b3e4d708342fc8a0b33",
+    "semantic_hash": "250a7b38f62c7b3e4d708342fc8a0b33"
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/onboarding/OnboardingScreen.kt": {
+    "mtime": 1787341584.6923785,
+    "ast_hash": "651f26b50dec192330ac4354c3f2ac7d",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/onboarding/OnboardingViewModel.kt": {
+    "mtime": 1787377113.849121,
+    "ast_hash": "ef493111fd2d1033df4f5dba14f4ab80",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/theme/Color.kt": {
+    "mtime": 1787102399.6107044,
+    "ast_hash": "2fe3f3e7f40b447c0383e66511975e50",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/theme/Theme.kt": {
+    "mtime": 1787029427.136154,
+    "ast_hash": "31ea5abeaa01df49b87fba86797f2ecb",
+    "semantic_hash": "31ea5abeaa01df49b87fba86797f2ecb"
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/theme/Type.kt": {
+    "mtime": 1787018155.3772383,
+    "ast_hash": "f9e96683b154863f8ae7c8f04fdab60a",
+    "semantic_hash": "f9e96683b154863f8ae7c8f04fdab60a"
+  },
+  "app/src/test/java/dev/astermark/oracle/ExampleUnitTest.kt": {
+    "mtime": 1787018152.6601295,
+    "ast_hash": "bfb6ef2924c1370d5d30954eaf851b3a",
+    "semantic_hash": "bfb6ef2924c1370d5d30954eaf851b3a"
+  },
+  "build.gradle.kts": {
+    "mtime": 1787018155.8672578,
+    "ast_hash": "f49e4fcefdb4de67e72283440b2f3b75",
+    "semantic_hash": "f49e4fcefdb4de67e72283440b2f3b75"
+  },
+  "gradlew": {
+    "mtime": 1787035218.876159,
+    "ast_hash": "a43be8432bac3ffd05b3769aa42fe996",
+    "semantic_hash": "a43be8432bac3ffd05b3769aa42fe996"
+  },
+  "settings.gradle.kts": {
+    "mtime": 1787018148.800975,
+    "ast_hash": "156bdde5698562a8f020fe9f75c3d1fa",
+    "semantic_hash": "156bdde5698562a8f020fe9f75c3d1fa"
+  },
+  "README.md": {
+    "mtime": 1787018291.8687,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/src/main/res/mipmap-hdpi/ic_launcher.webp": {
+    "mtime": 1787018146.8988988,
+    "ast_hash": "39d9bb21eb48f128a71c3f01ad3cd427",
+    "semantic_hash": "39d9bb21eb48f128a71c3f01ad3cd427"
+  },
+  "app/src/main/res/mipmap-hdpi/ic_launcher_round.webp": {
+    "mtime": 1787018146.9158995,
+    "ast_hash": "70d6f58af3c76ee221c829b1ce9daa04",
+    "semantic_hash": "70d6f58af3c76ee221c829b1ce9daa04"
+  },
+  "app/src/main/res/mipmap-mdpi/ic_launcher.webp": {
+    "mtime": 1787018146.948901,
+    "ast_hash": "d2acce71c7b46e5e9540d23a9f7b2166",
+    "semantic_hash": "d2acce71c7b46e5e9540d23a9f7b2166"
+  },
+  "app/src/main/res/mipmap-mdpi/ic_launcher_round.webp": {
+    "mtime": 1787018146.9669015,
+    "ast_hash": "6376acb48f96a855ee95c113cd7fd616",
+    "semantic_hash": "6376acb48f96a855ee95c113cd7fd616"
+  },
+  "app/src/main/res/mipmap-xhdpi/ic_launcher.webp": {
+    "mtime": 1787018147.0459049,
+    "ast_hash": "bd087d80b70bec05a43c745f29dc3ffc",
+    "semantic_hash": "bd087d80b70bec05a43c745f29dc3ffc"
+  },
+  "app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp": {
+    "mtime": 1787018147.0619054,
+    "ast_hash": "7479edd56ab712609f030054bffd7263",
+    "semantic_hash": "7479edd56ab712609f030054bffd7263"
+  },
+  "app/src/main/res/mipmap-xxhdpi/ic_launcher.webp": {
+    "mtime": 1787018147.0889065,
+    "ast_hash": "ea180e8d1a2e8300cc998b987266b736",
+    "semantic_hash": "ea180e8d1a2e8300cc998b987266b736"
+  },
+  "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp": {
+    "mtime": 1787018147.1099074,
+    "ast_hash": "947842742b29eeda80ee0805e1600366",
+    "semantic_hash": "947842742b29eeda80ee0805e1600366"
+  },
+  "app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp": {
+    "mtime": 1787018147.1429086,
+    "ast_hash": "54ab624970c86c2146e76b93f27586f7",
+    "semantic_hash": "54ab624970c86c2146e76b93f27586f7"
+  },
+  "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp": {
+    "mtime": 1787018147.1619093,
+    "ast_hash": "9ee591be72fb336861a8044086054daa",
+    "semantic_hash": "9ee591be72fb336861a8044086054daa"
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/devicemanager/pair/PairingInput.kt": {
+    "mtime": 1787289521.8514454,
+    "ast_hash": "fb6e38d7747189947870f8ef64099652",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/devicemanager/pair/PairingScreen.kt": {
+    "mtime": 1787340945.1705987,
+    "ast_hash": "dfe5642d680a7ae97361ee33f7db4cae",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/devicemanager/pair/PairingViewModel.kt": {
+    "mtime": 1787033602.2150419,
+    "ast_hash": "7185e13aac0e09181611dca05fedaf2f",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1787085990.9741256,
+    "ast_hash": "47327abff30f85c8f3ce4480c68ab3fb",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1787086105.73873,
+    "ast_hash": "3fc8d8d9ba48bad4e454a1931a865d6f",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/navigation/NavKey.kt": {
+    "mtime": 1787343193.7781837,
+    "ast_hash": "0d0cb92817bfc3234429aa029f7d000c",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/navigation/NavigationState.kt": {
+    "mtime": 1787343199.7814255,
+    "ast_hash": "56fac9e0747d0cffca6451248d1519c1",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/dev/astermark/oracle/ui/navigation/Navigator.kt": {
+    "mtime": 1787343204.3886113,
+    "ast_hash": "cc940a88e14c27b7cefd0291c5234c50",
+    "semantic_hash": ""
+  }
+}
