@@ -11,6 +11,8 @@ import dev.astermark.hdp_node.credential.CredentialStore
 import dev.astermark.hdp_node.credential.DeviceKeyStore
 import dev.astermark.hdp_node.policy.LocalPolicy
 import dev.astermark.hdp_node.policy.PermissionGate
+import dev.astermark.hdp_node.sentinel.CandidateBootstrapVerifier
+import dev.astermark.hdp_node.sentinel.TrustedHostStore
 import dev.astermark.hdp_node.transport.HdpSocket
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -20,7 +22,7 @@ import kotlin.getValue
 
 /** The M6 emulator-to-host bridge endpoint (android-node-contract.md's "M6 bridge handoff").
  * `10.0.2.2` is the emulator's fixed alias to the host loopback. */
-private const val DEFAULT_ENDPOINT = "ws://10.0.2.2:8765/hdp/v0/socket"
+private const val DEFAULT_ENDPOINT = "ws://127.0.0.1:8765/hdp/v0/socket"
 
 /**
  * Hand-rolled composition root for the process (m6-handoff.md §3.2: no DI framework — Hilt is not
@@ -40,6 +42,10 @@ class AppContainer(private val context: Context) {
     val deviceIdentity: DeviceIdentity by lazy { DeviceIdentity(context) }
     val credentialStore: CredentialStore by lazy { CredentialStore(context) }
     val deviceKeyStore: DeviceKeyStore by lazy { DeviceKeyStore() }
+    val trustedHostStore: TrustedHostStore by lazy { TrustedHostStore(context) }
+    val candidateBootstrapVerifier: CandidateBootstrapVerifier by lazy {
+        CandidateBootstrapVerifier(deviceKeyStore, trustedHostStore)
+    }
     val permissionGate: PermissionGate by lazy { PermissionGate(context) }
     val localPolicy: LocalPolicy by lazy { LocalPolicy() }
 
@@ -79,6 +85,7 @@ class AppContainer(private val context: Context) {
             permissionGate = { permissionGate.canPostNotifications() },
             deviceName = { deviceIdentity.deviceName(defaultDeviceName()) },
             scope = nodeScope,
+            candidateBootstrapVerifier = candidateBootstrapVerifier,
         )
     }
 

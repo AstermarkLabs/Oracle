@@ -5,9 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.key.onKeyEvent
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
@@ -16,6 +16,8 @@ import androidx.navigation3.ui.NavDisplay
 import dev.astermark.oracle.ui.devicemanager.DeviceManagerScreen
 import dev.astermark.oracle.ui.devicemanager.pair.PairingScreen
 import dev.astermark.oracle.ui.devicemanager.pair.PairingViewModel
+import dev.astermark.oracle.ui.devicemanager.sentinel.SentinelApprovalDialog
+import dev.astermark.hdp_node.sentinel.SentinelDecision
 import dev.astermark.oracle.ui.navigation.DeviceManager
 import dev.astermark.oracle.ui.navigation.LocalNav
 import dev.astermark.oracle.ui.navigation.Onboarding
@@ -41,6 +43,7 @@ class MainActivity : ComponentActivity() {
                     topLevelRoutes = setOf(Onboarding, DeviceManager)
                 )
                 val navigator = remember { Navigator(navigationState) }
+                val sentinelApproval by container.hdpNode.sentinelApproval.collectAsState()
 
                 CompositionLocalProvider(LocalNav provides navigator) {
                     val entryProvider = entryProvider {
@@ -59,7 +62,6 @@ class MainActivity : ComponentActivity() {
                                 factory = viewModelFactory {
                                     initializer {
                                         PairingViewModel(
-                                            hdpNode = container.hdpNode,
                                             persistEndpoint = { container.setEndpoint(it) },
                                             initialEndpoint = container.endpoint,
                                         )
@@ -68,10 +70,8 @@ class MainActivity : ComponentActivity() {
                             )
                             PairingScreen(
                                 onBack = { navigator.goBack() },
-                                uiState = pairingViewModel.uiState,
                                 endpoint = pairingViewModel.endpoint,
                                 onEndpointChange = pairingViewModel::onEndpointChange,
-                                onPair = pairingViewModel::onPair
                             )
                         }
                         entry<DeviceManager> {
@@ -83,6 +83,11 @@ class MainActivity : ComponentActivity() {
                         entries = navigationState.toEntries(entryProvider),
                         onBack = { navigator.goBack() }
                     )
+                    sentinelApproval?.let { request ->
+                        SentinelApprovalDialog(request) { decision: SentinelDecision ->
+                            container.hdpNode.decideSentinel(request.enrollmentId, decision)
+                        }
+                    }
                 }
             }
         }

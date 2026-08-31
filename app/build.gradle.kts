@@ -39,7 +39,7 @@ android {
 dependencies {
     // Published locally from ../HDPAndroidNode/hdp-node via `./gradlew publishToMavenLocal`.
     // Snapshot freshness is handled by the resolutionStrategy below, not by this version string.
-    implementation("dev.astermark:hdp-node:0.1.0-SNAPSHOT")
+    implementation(libs.hdp.node)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
